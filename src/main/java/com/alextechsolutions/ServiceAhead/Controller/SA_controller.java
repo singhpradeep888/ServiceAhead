@@ -8,7 +8,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class SA_controller {
 @GetMapping("/home")
     public RedirectView getHomePage(){
-        return new RedirectView("index.html");
+        return new RedirectView("/html/index.html");
     }
     
 }

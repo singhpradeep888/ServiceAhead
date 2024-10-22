@@ -771,7 +771,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg'); /* Add your background image here */
+    background-image: url('./Images/hero-bg.jpg'); /* Add your background image here */
     background-size: cover;
     background-position: center;
 }
