@@ -1,5 +1,5 @@
 pipeline {
-    agent {lable 'master'}
+    agent any
 
     tools {
         maven "MVN"
