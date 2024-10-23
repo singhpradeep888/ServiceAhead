@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {lable 'master'}
 
     tools {
         maven "MVN"
@@ -8,20 +8,10 @@ pipeline {
     stages {
         stage('get code') {
             steps {
-                git 'https://github.com/singhpradeep888/ServiceAhead.git'
+                git branch:'main ,url:'https://github.com/singhpradeep888/ServiceAhead.git'
             }
         }
-        stage('clean') {
-            steps {
-                sh 'mvn clean'
-            }
-        }
-        stage('validate') {
-            steps {
-                sh 'mvn validate'
-            }
-        }
-        stage('compile') {
+        stage('build') {
             steps {
                 sh 'mvn compile'
             }
@@ -36,21 +26,7 @@ pipeline {
                 sh 'mvn clean'
             }
         }
-        stage('pre-intrigation test') {
-            steps {
-                sh 'mvn pre-integration-test'
-            }
-        }
-        stage('intrigation test') {
-            steps {
-                sh 'mvn integration-test'
-            }
-        }
-        stage('post-intrigation test') {
-            steps {
-                sh 'mvn post-integration-test'
-            }
-        }
+
         stage('verify') {
             steps {
                 // cleaning step
