@@ -1,11 +1,7 @@
 pipeline {
     agent any
 
-    environment {
-        // Define environment variables if needed
-        MAVEN_HOME = '/usr/share/maven' // Adjust this path as per your system
-        JAVA_HOME = '/usr/lib/jvm/java-11-openjdk' // Adjust Java version as needed
-    }
+  
 
     stages {
         stage('Checkout') {
