@@ -865,3 +865,14 @@ body {
   .register_name{
     color: #ff3c1f;
   }
+  
+  #fuelType {
+    display: flex;          /* Use flexbox for horizontal alignment */
+    gap: 15px;             /* Space between radio button options */
+    align-items: center;   /* Align items vertically centered */
+}
+
+#fuelType label {
+    display: flex;         /* Ensures the label text is aligned with the radio button */
+    align-items: center;   /* Vertically centers the radio button with its label */
+}

@@ -131,24 +131,84 @@
         </div>
     </footer>
 
-    <!-- Modal Structure -->
+  <!-- Modal Structure -->
 <div id="bookingModal" class="modal">
+
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h2>Book Your Car Service</h2>
         <form id="bookingForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            
+            <!-- Full Name -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
 
+            <!-- Email -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
+            <!-- Phone Number -->
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
 
+            <!-- Phone Number -->
+            <label for="address">Full Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <!-- Major Cities Dropdown -->
+            <label for="city">Select City:</label>
+            <select id="city" name="city" required>
+                <option value="" disabled selected>Select your city</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Pune">Pune</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+            </select>
+
+            <!-- Car Company Dropdown -->
+            <label for="carCompany">Car Company:</label>
+            <select id="carCompany" name="carCompany" required>
+                <option value="" disabled selected>Select car company</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Ford">Ford</option>
+                <option value="Maruti Suzuki">Maruti Suzuki</option>
+                <option value="Tata">Tata</option>
+                <option value="Mahindra">Mahindra</option>
+            </select>
+
+            <!-- Fuel Type Radio Buttons -->
+            <label for="fuelType">Fuel Type:</label>
+<div id="fuelType">
+    <label>
+        <input type="radio" name="fuelType" value="Petrol" required>
+        Petrol
+    </label>
+    <label>
+        <input type="radio" name="fuelType" value="Diesel" required>
+        Diesel
+    </label>
+    <label>
+        <input type="radio" name="fuelType" value="CNG" required>
+        CNG
+    </label>
+    <label>
+        <input type="radio" name="fuelType" value="Electric" required>
+        Electric
+    </label>
+</div>
+            
+
+            <!-- Pick-Up Slot -->
             <label for="slot">Pick-Up Slot:</label>
             <input type="datetime-local" id="slot" name="slot" required>
 
+            <!-- Confirm Button -->
             <button type="submit" id="confirmBtn">Confirm</button>
         </form>
     </div>
