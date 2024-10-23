@@ -8,9 +8,10 @@ pipeline {
     stages {
         stage('get code') {
             steps {
-                git branch:'main ,url:'https://github.com/singhpradeep888/ServiceAhead.git'
+                git branch:'main' ,url:'https://github.com/singhpradeep888/ServiceAhead.git'
             }
         }
+        
         stage('build') {
             steps {
                 sh 'mvn compile'
@@ -39,4 +40,4 @@ pipeline {
             }
         }
     }
-}
+    }
